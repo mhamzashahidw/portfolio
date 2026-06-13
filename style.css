@@ -1202,3 +1202,21 @@ body.light-theme .map-container-v2 iframe {
     border-color: rgba(var(--accent-rgb), 0.45) !important;
     box-shadow: 0 20px 40px -15px rgba(var(--accent-rgb), 0.25) !important;
 }
+
+
+
+
+
+
+
+
+
+
+.btn-dmc-link {
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+}
+
+.btn-dmc-link:hover {
+    color: var(--accent) !important;
+}
