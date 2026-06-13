@@ -3,544 +3,1062 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HamzaDevLog | Home</title>
+    <title>HamzaDevLog | Professional Portfolio</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Hamza Shahid, Software Engineering Student at UET Lahore. Specializing in C++, SQL Database design, and Front-End Web Development.">
+    <meta name="keywords" content="Hamza, HamzaDevLog, Software Engineer, UET Lahore, Web Developer, C++ Developer, Portfolio">
+    <meta name="author" content="Hamza Shahid">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="dark-theme">
 
-    <aside class="sidebar">
-        <button id="theme-btn" class="theme-toggle"><i class="bi bi-brightness-high"></i></button>
-        
-        <div class="logo">
-            <h2>Hamza<span>DevLog</span></h2>
-        </div>
+    <!-- Interactive Canvas Background -->
+    <canvas id="interactive-canvas"></canvas>
 
-        <nav class="nav-menu">
-            <ul>
-                <li class="nv"><a href="#home" ><i class="bi bi-house-door"></i> Home</a></li>
-                <li class="nv"><a href="#about"><i class="bi bi-person"></i> About</a></li>
-                <li class="nv"><a href="#resume"><i class="bi bi-file-earmark-person"></i> Resume</a></li>
-                <li class="nv"><a href="#portfolio"><i class="bi bi-images"></i> Portfolio</a></li>
-                <li class="nv"><a href="#service"><i class="bi bi-menu-app"></i> Services</a></li>
-                <li class="nv"><a href="#contact"><i class="bi bi-envelope"></i> Contact</a></li>
-            </ul>
+    <!-- Header / Sticky Navbar -->
+    <header class="navbar-wrapper">
+        <nav class="navbar navbar-expand-lg container" id="main-navbar">
+            <a class="navbar-brand" href="#home">
+                Hamza<span>DevLog</span>
+            </a>
+            
+            <div class="d-flex align-items-center order-lg-last gap-2">
+                <!-- Theme Toggle Button -->
+                <button id="theme-btn" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                    <i class="bi bi-brightness-high-fill theme-icon-light d-none"></i>
+                </button>
+                
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" id="nav-link-home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" id="nav-link-about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume" id="nav-link-resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio" id="nav-link-portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service" id="nav-link-service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials" id="nav-link-testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" id="nav-link-contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
+    </header>
 
-        <div class="social-links">
-            <a href="https://github.com/mhamzashahidw" target="_blank"><i class="bi bi-github"></i></a>
-            
-            <a href="https://www.linkedin.com/in/mhamzashahidw61" target="_blank"><i class="bi bi-linkedin"></i></a>
-            
-            <a href="https://www.instagram.com/hamzashahid679?igsh=MW9ubjR0emtkeDJnYw==" target="_blank"><i class="bi bi-instagram"></i></a>
-            
-            <a href="https://www.facebook.com/profile.php?id=61557366357948&mibextid=rS40aB7S9Ucbxw6v" target="_blank"><i class="bi bi-facebook"></i></a>
-            
-            <a href="https://wa.me/923708040671" target="_blank"><i class="bi bi-whatsapp"></i></a>
-        </div>
-    </aside>
-
-    <main class="main-content">
+    <!-- Main Content Grid -->
+    <main>
         
-        <section id="home" class="hero page-section">
-            <div class="hero-text">
-                <h1>HamzaDevLog</h1>
-                <h2>Hamza</h2>
-                <h3>I'm a <span>Software Engineer</span></h3>
-                <p>Passionate about writing clean code, designing efficient databases, and creating exceptional web experiences. Let's build something great.</p>
-                
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-solid">View My Work</a>
-                    
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                </div>
-            </div>
-
-            <div class="hero-image">
-                <img src="profile.png" alt="Hamza" class="snap-img">
-            </div>
-        </section>
-
-        <section id="about" class="page-section">
-            <h2 class="section-title fade-in">About Me</h2>
-
-            <div class="about-grid">
-                <div class="profile-card fade-in delay-1">
-                    <img src="profile.png" alt="Hamza" class="profile-avatar">
-                    <h3>Hamza</h3>
-                    <p class="profile-title">Software Engineering Student</p>
-                    
-                    <div class="profile-info">
-                        <p><i class="bi bi-envelope"></i> mhamzashahidw@gmail.com</p>
-                        <p><i class="bi bi-geo-alt"></i> Zafarwal, Pakistan</p>
-                    </div>
-                </div>
-
-                <div class="bio-content fade-in delay-2">
-                    <span class="badge">Get to Know Me</span>
-                    <h3 class="bio-heading">Passionate About Creating Software Solutions</h3>
-                    <p class="bio-text">
-                        I am a 3rd-semester Software Engineering student at UET Lahore. I have a strong foundation in Object-Oriented Programming and database design. I enjoy turning complex logic into efficient code and am currently expanding my skills into front-end web development to build complete, full-stack applications.
-                    </p>
-
-                    <div class="stats-grid">
-                        <div class="stat-box">
-                            <h4>10+</h4><p>Academic Projects</p>
-                        </div>
-                        <div class="stat-box">
-                            <h4>3rd</h4><p>Semester (SE)</p>
-                        </div>
-                        <div class="stat-box">
-                            <h4>100%</h4><p>Dedication</p>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="skills-section">
-                <h3 class="text-center skills-title fade-in">—— My Skills ——</h3>
-                
-                <div class="skills-grid">
-                    <div class="skill-card fade-in delay-1">
-                        <h4>Core Programming</h4>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>C++ & OOP</span><span>90%</span></div>
-                            <div class="progress-bar-bg"><div class="progress-fill" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Digital Logic Design</span><span>85%</span></div>
-                            <div class="progress-bar-bg"><div class="progress-fill" style="width: 85%;"></div></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-card fade-in delay-2">
-                        <h4>Web & Databases</h4>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>HTML, CSS & JS</span><span>80%</span></div>
-                            <div class="progress-bar-bg"><div class="progress-fill" style="width: 80%;"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>SQL & Databases</span><span>75%</span></div>
-                            <div class="progress-bar-bg"><div class="progress-fill" style="width: 75%;"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="resume" class="page-section">
-            
-            <div class="section-header fade-in">
-                <h2 class="section-title">Resume</h2>
-                <p class="section-desc">Motivated and detail-oriented Software Engineering student with strong skills in web design, C++ programming, and problem-solving. Eager to apply technical expertise to contribute effectively while gaining hands-on professional experience.</p>
-            </div>
-
-            <div class="resume-grid">
-                
-                <div class="resume-left fade-in delay-1">
-                    <div class="resume-card">
-                        <img src="profile.png" alt="Hamza Shahid" class="resume-img">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center min-vh-75 py-5">
+                    <div class="col-lg-7 hero-text order-2 order-lg-1 mt-4 mt-lg-0 text-center text-lg-start">
+                        <span class="badge hero-badge mb-3">Welcome to my space</span>
+                        <h1 class="hero-title">HamzaDevLog</h1>
+                        <h2 class="hero-name">M. Hamza Shahid</h2>
+                        <h3 class="hero-subtitle mb-4">I'm a <span>Software Engineering Student</span></h3>
+                        <p class="hero-desc mb-4 mx-auto mx-lg-0">
+                            Passionate about writing clean code, designing efficient databases, and creating exceptional web experiences. Let's build something great together.
+                        </p>
                         
-                        <div class="resume-block">
-                            <h3>Professional Summary</h3>
-                            <p>Driven Software Engineering student at UET Lahore with expertise in developing logical solutions and responsive web interfaces. Passionate about leveraging C++ and Object-Oriented principles to solve complex challenges.</p>
+                        <div class="hero-buttons d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                            <a href="#portfolio" class="btn btn-solid shadow-sm">View My Work <i class="bi bi-arrow-right-short ms-1"></i></a>
+                            <a href="#contact" class="btn btn-outline">Get In Touch <i class="bi bi-chat-dots ms-1"></i></a>
                         </div>
 
-                        <div class="resume-block">
-                            <h3>Contact Information</h3>
-                            <div class="contact-info">
-                                <p><i class="bi bi-geo-alt"></i> Zafarwal, Narowal, Pakistan</p>
-                                <p><i class="bi bi-envelope"></i> mhamzashahidw@gmail.com</p>
-                                <p><i class="bi bi-telephone"></i> 0370-8040671</p>
-                                <p><i class="bi bi-linkedin"></i> linkedin.com/in/mhamzashahidw61</p>
-                            </div>
-                        </div>
-
-                        <div class="resume-block">
-                            <h3>Technical Skills</h3>
-                            <div class="skill-item">
-                                <div class="skill-info"><span>C++ & OOP</span><span>95%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-fill" style="width: 95%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info"><span>HTML, CSS & Bootstrap</span><span>85%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-fill" style="width: 85%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info"><span>SQL Database</span><span>75%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-fill" style="width: 75%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info"><span>JavaScript & jQuery</span><span>65%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-fill" style="width: 65%;"></div></div>
-                            </div>
+                        <div class="hero-socials mt-5 d-flex gap-3 justify-content-center justify-content-lg-start">
+                            <a href="https://github.com/mhamzashahidw" target="_blank" class="social-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mhamzashahidw61" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://wa.me/923708040671" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/hamzashahid679?igsh=MW9ubjR0emtkeDJnYw==" target="_blank" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61557366357948&mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                         </div>
                     </div>
-                </div>
-
-                <div class="resume-right fade-in delay-2">
                     
-                    <div class="timeline-group">
-                        <h3 class="timeline-title"><i class="bi bi-code-slash"></i> Projects & Experience</h3>
-                        
-                        <div class="timeline-item">
-                            <h4>Front-End Web Development</h4>
-                            <p class="timeline-date">2025 - Present</p>
-                            <p class="timeline-org"><i class="bi bi-laptop"></i> Personal Projects</p>
-                            <ul>
-                                <li>Designed multiple responsive websites using HTML, CSS, JavaScript, jQuery, and Bootstrap.</li>
-                                <li>Developed a functional web-based Calculator using pure JavaScript logic.</li>
-                                <li>Hosted projects and maintained version control using GitHub.</li>
-                            </ul>
-                        </div>
-
-                        <div class="timeline-item">
-                            <h4>C++ Console Applications</h4>
-                            <p class="timeline-date">2025 - Present</p>
-                            <p class="timeline-org"><i class="bi bi-terminal"></i> Academic & Personal</p>
-                            <ul>
-                                <li>Developed programs for calculations, data handling, and algorithmic problem-solving.</li>
-                                <li>Applied core Object-Oriented Programming (OOP) concepts to structure efficient code.</li>
-                            </ul>
+                    <div class="col-lg-5 order-1 order-lg-2 d-flex justify-content-center">
+                        <div class="hero-image-wrapper">
+                            <div class="hero-image-backdrop"></div>
+                            <img src="img.jpeg" alt="Hamza Shahid" class="hero-img img-fluid profile-fallback">
                         </div>
                     </div>
-
-                    <div class="timeline-group">
-                        <h3 class="timeline-title"><i class="bi bi-mortarboard"></i> Education</h3>
-                        
-                        <div class="timeline-item">
-                            <h4>BS Software Engineering</h4>
-                            <p class="timeline-date">2025 - 2029 (Expected)</p>
-                            <p class="timeline-org"><i class="bi bi-building"></i> UET, Lahore</p>
-                            <p>Currently in 3rd Semester. Actively expanding knowledge in Data Structures, Algorithms, and Software Design.</p>
-                        </div>
-
-                        <div class="timeline-item">
-                            <h4>F.Sc (Pre-Medical)</h4>
-                            <p class="timeline-date">2022 - 2024</p>
-                            <p class="timeline-org"><i class="bi bi-building"></i> Punjab College, Zafarwal</p>
-                            <p>Achieved exceptional academic results with 1029 Marks (A+ Grade / 85.75%).</p>
-                        </div>
-
-                        <div class="timeline-item">
-                            <h4>Matriculation (Science)</h4>
-                            <p class="timeline-date">2020 - 2022</p>
-                            <p class="timeline-org"><i class="bi bi-building"></i> Govt. High School, Zafarwal</p>
-                            <p>Graduated with distinction scoring 994 Marks (A+ Grade / 90.36%).</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-group">
-                        <h3 class="timeline-title"><i class="bi bi-award"></i> Certifications</h3>
-                        
-                        <div class="timeline-item">
-                            <h4>Front End Web Designing</h4>
-                            <p class="timeline-date">2025</p>
-                            <p class="timeline-org"><i class="bi bi-patch-check"></i> Theta Solutions</p>
-                            <p>Completed comprehensive training in HTML, CSS, Bootstrap, jQuery, and JavaScript.</p>
-                            <img src="theta.jpeg" alt="Theta Solutions Certificate" class="cert-img">
-                        </div>
-
-                        <div class="timeline-item">
-                            <h4>Certificate of Achievement (EFx)</h4>
-                            <p class="timeline-date">2025</p>
-                            <p class="timeline-org"><i class="bi bi-patch-check"></i> ASME UET KSK</p>
-                            <p>Awarded for valuable contribution, presence, and dedication in EFx 2025.</p>
-                            <img src="asme.jpg" alt="ASME EFx Certificate" class="cert-img">
-                        </div>
-
-                        <div class="timeline-item">
-                            <h4>CODEK 3.0: Coding Challenge</h4>
-                            <p class="timeline-date">2025</p>
-                            <p class="timeline-org"><i class="bi bi-patch-check"></i> ACM UET New Campus</p>
-                            <p>Successfully participated in the ultimate coding competition.</p>
-                            <img src="codex.jpeg" alt="Codex Coding Certificate" class="cert-img">
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-
-
-
-        <section id="portfolio" class="page-section">
-            
-            <div class="section-header fade-in">
-                <h2 class="section-title">Portfolio</h2>
-                <p class="section-desc">A collection of my academic and personal projects, ranging from responsive web designs to complex Object-Oriented C++ console applications.</p>
-            </div>
-
-            <div class="portfolio-container fade-in delay-1">
-                
-                <div class="portfolio-sidebar">
-                    <ul class="portfolio-filters" id="portfolio-filters">
-                        <li class="filter-active" data-filter="all">All Projects</li>
-                        <li data-filter="web">Websites</li>
-                        <li data-filter="cpp">C++ Console</li>
-                        <li data-filter="js">JavaScript</li>
-                    </ul>
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-section-alt">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge section-badge mb-2">Get to Know Me</span>
+                    <h2 class="section-title">About Me</h2>
                 </div>
 
-                <div class="portfolio-grid" id="portfolio-grid">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-4">
+                        <div class="about-profile-card text-center p-4">
+                            <div class="avatar-container mb-3">
+                                <img src="img.jpeg" alt="Hamza" class="about-avatar profile-fallback img-fluid">
+                            </div>
+                            <h3 class="about-name">M. Hamza Shahid</h3>
+                            <p class="about-title mb-3">Software Engineering Student</p>
+                            <hr class="w-50 mx-auto my-3 opacity-25">
+                            <div class="about-contact-details text-start">
+                                <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i> mhamzashahidw@gmail.com</p>
+                                <p class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i> Zafarwal, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="about-bio p-lg-4">
+                            <h3 class="bio-heading mb-3">Passionate About Creating Software Solutions</h3>
+                            <p class="bio-text mb-4">
+                                I am a 3rd-semester Software Engineering student at UET Lahore. I have a strong foundation in Object-Oriented Programming and database design. I enjoy turning complex logic into efficient, clean code and am currently expanding my skills into front-end web development to build complete, full-stack applications.
+                            </p>
+
+                            <div class="row g-3 mb-5">
+                                <div class="col-4 col-sm-4">
+                                    <div class="stat-box text-center p-3">
+                                        <h4 class="stat-number">10+</h4>
+                                        <p class="stat-label mb-0">Projects</p>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-sm-4">
+                                    <div class="stat-box text-center p-3">
+                                        <h4 class="stat-number">3rd</h4>
+                                        <p class="stat-label mb-0">Semester (SE)</p>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-sm-4">
+                                    <div class="stat-box text-center p-3">
+                                        <h4 class="stat-number">100%</h4>
+                                        <p class="stat-label mb-0">Dedication</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Sub-section -->
+                <div class="skills-wrapper mt-5 pt-4">
+                    <h3 class="skills-heading text-center mb-4">—— My Technical Skills ——</h3>
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6 col-lg-5">
+                            <div class="skill-card p-4">
+                                <h4 class="skill-group-title mb-4"><i class="bi bi-code-square me-2"></i>Core Programming</h4>
+                                <div class="skill-item mb-4">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">C++ & OOP</span>
+                                        <span class="skill-percentage">95%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-fill" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item mb-0">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">Digital Logic Design</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-fill" data-width="85%"></div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-5">
+                            <div class="skill-card p-4">
+                                <h4 class="skill-group-title mb-4"><i class="bi bi-globe2 me-2"></i>Web & Databases</h4>
+                                <div class="skill-item mb-4">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">HTML, CSS & JS</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-fill" data-width="80%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item mb-0">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">SQL & Databases</span>
+                                        <span class="skill-percentage">75%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-fill" data-width="75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-6 col-lg-5">
+                            <div class="skill-card p-4">
+                                <h4 class="skill-group-title mb-4"><i class="bi bi-code-square me-2"></i>Major Programming</h4>
+                                <div class="skill-item mb-4">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">C++ & DSA</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-fill" data-width="90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item mb-0">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">Computer networks</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-fill" data-width="85%"></div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge section-badge mb-2">My History</span>
+                    <h2 class="section-title">Resume</h2>
+                    <p class="section-desc mx-auto col-lg-8">
+                        Motivated and detail-oriented Software Engineering student with strong skills in web design, C++ programming, and problem-solving. Eager to apply technical expertise to contribute effectively while gaining hands-on professional experience.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Resume Sidebar Info -->
+                    <div class="col-lg-4">
+                        <div class="resume-info-card p-4 h-100">
+                            <div class="avatar-container mb-4 text-center">
+                                <img src="img.jpeg" alt="Hamza Shahid" class="resume-card-img profile-fallback img-fluid">
+                            </div>
+                            
+                            <div class="resume-summary mb-4">
+                                <h4 class="resume-info-title mb-3">Professional Summary</h4>
+                                <p class="small text-muted mb-0">
+                                    Driven Software Engineering student at UET Lahore with expertise in developing logical solutions and responsive web interfaces. Passionate about leveraging C++ and Object-Oriented principles to solve complex challenges.
+                                </p>
+                            </div>
+
+                            <div class="resume-contact mb-4">
+                                <h4 class="resume-info-title mb-3">Contact Details</h4>
+                                <ul class="list-unstyled contact-list small">
+                                    <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i> Zafarwal, Narowal, Pakistan</li>
+                                    <li class="mb-2"><i class="bi bi-envelope me-2 text-primary"></i> mhamzashahidw@gmail.com</li>
+                                    <li class="mb-2"><i class="bi bi-telephone me-2 text-primary"></i> 0370-8040671</li>
+                                    <li class="mb-0"><i class="bi bi-linkedin me-2 text-primary"></i> linkedin.com/in/mhamzashahidw61</li>
+                                </ul>
+                            </div>
+
+                            <div class="resume-skills">
+                                <h4 class="resume-info-title mb-3">Skill Breakdown</h4>
+                                <div class="skill-mini-item mb-2">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="mini-skill-name">C++ & OOP</span>
+                                        <span class="mini-skill-percent">95%</span>
+                                    </div>
+                                    <div class="progress-bar-bg-sm"><div class="progress-fill-sm" data-width="95%"></div></div>
+                                </div>
+                                <div class="skill-mini-item mb-2">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="mini-skill-name">HTML, CSS & JavaScript</span>
+                                        <span class="mini-skill-percent">90%</span>
+                                    </div>
+                                    <div class="progress-bar-bg-sm"><div class="progress-fill-sm" data-width="85%"></div></div>
+                                </div>
+                                <div class="skill-mini-item mb-2">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="mini-skill-name">SQL Database</span>
+                                        <span class="mini-skill-percent">75%</span>
+                                    </div>
+                                    <div class="progress-bar-bg-sm"><div class="progress-fill-sm" data-width="75%"></div></div>
+                                </div>
+                                <div class="skill-mini-item">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="mini-skill-name">Bootstrap & jQuery</span>
+                                        <span class="mini-skill-percent">65%</span>
+                                    </div>
+                                    <div class="progress-bar-bg-sm"><div class="progress-fill-sm" data-width="65%"></div></div>
+                                </div>
+
+                               
+
+
+                                <div class="skill-mini-item">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="mini-skill-name">C++ & DSA</span>
+                                        <span class="mini-skill-percent">90%</span>
+                                    </div>
+                                    <div class="progress-bar-bg-sm"><div class="progress-fill-sm" data-width="90%"></div></div>
+                                </div>
+
+                                <div class="skill-mini-item">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="mini-skill-name">Computer Networks (Cisco) </span>
+                                        <span class="mini-skill-percent">85%</span>
+                                    </div>
+                                    <div class="progress-bar-bg-sm"><div class="progress-fill-sm" data-width="85%"></div></div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Content -->
+                    <div class="col-lg-8">
+                        <!-- Projects & Experience -->
+                        <div class="timeline-group mb-5">
+                            <h3 class="timeline-group-title mb-4"><i class="bi bi-code-slash me-2 text-primary"></i>Projects & Experience</h3>
+                            
+                            <div class="timeline-card-item p-4 mb-3">
+                                <div class="d-flex justify-content-between flex-wrap align-items-center mb-2">
+                                    <h4 class="timeline-item-title mb-0">Front-End Web Development</h4>
+                                    <span class="badge date-badge">2025 - Present</span>
+                                </div>
+                                <p class="timeline-org text-primary mb-2"><i class="bi bi-laptop me-1"></i> Personal Projects</p>
+                                <ul class="timeline-bullets text-muted mb-0 small">
+                                    <li>Designed multiple responsive websites using HTML, CSS, JavaScript, jQuery, and Bootstrap.</li>
+                                    <li>Developed a functional web-based Calculator using pure JavaScript logic.</li>
+                                    <li>Hosted projects and maintained version control using GitHub.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-card-item p-4">
+                                <div class="d-flex justify-content-between flex-wrap align-items-center mb-2">
+                                    <h4 class="timeline-item-title mb-0">C++ Console Applications</h4>
+                                    <span class="badge date-badge">2025 - Present</span>
+                                </div>
+                                <p class="timeline-org text-primary mb-2"><i class="bi bi-terminal me-1"></i> Academic & Personal</p>
+                                <ul class="timeline-bullets text-muted mb-0 small">
+                                    <li>Developed programs for calculations, data handling, and algorithmic problem-solving.</li>
+                                    <li>Applied core Object-Oriented Programming (OOP) concepts to structure efficient code.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="timeline-group mb-5">
+                            <h3 class="timeline-group-title mb-4"><i class="bi bi-mortarboard me-2 text-primary"></i>Education</h3>
+                            
+                            <div class="timeline-card-item p-4 mb-3">
+                                <div class="d-flex justify-content-between flex-wrap align-items-center mb-2">
+                                    <h4 class="timeline-item-title mb-0">BS Software Engineering</h4>
+                                    <span class="badge date-badge">2025 - 2029 (Expected)</span>
+                                </div>
+                                <p class="timeline-org text-primary mb-2"><i class="bi bi-building me-1"></i> UET, Lahore</p>
+                                <p class="text-muted small mb-0">Currently in 3rd Semester. Actively expanding knowledge in Data Structures, Algorithms, and Software Design.</p>
+                            </div>
+
+                            <div class="timeline-card-item p-4 mb-3">
+                                <div class="d-flex justify-content-between flex-wrap align-items-center mb-2">
+                                    <h4 class="timeline-item-title mb-0">F.Sc (Pre-Medical)</h4>
+                                    <span class="badge date-badge">2022 - 2024</span>
+                                </div>
+                                <p class="timeline-org text-primary mb-2"><i class="bi bi-building me-1"></i> Punjab College, Zafarwal</p>
+                                <p class="text-muted small mb-0">Achieved exceptional academic results scoring 1029 Marks (A+ Grade / 85.75%).</p>
+                            </div>
+
+                            <div class="timeline-card-item p-4">
+                                <div class="d-flex justify-content-between flex-wrap align-items-center mb-2">
+                                    <h4 class="timeline-item-title mb-0">Matriculation (Science)</h4>
+                                    <span class="badge date-badge">2020 - 2022</span>
+                                </div>
+                                <p class="timeline-org text-primary mb-2"><i class="bi bi-building me-1"></i> Govt. High School, Zafarwal</p>
+                                <p class="text-muted small mb-0">Graduated with distinction scoring 994 Marks (A+ Grade / 90.36%).</p>
+                            </div>
+                        </div>
+
+                        <!-- Certifications -->
+                        <div class="timeline-group">
+                            <h3 class="timeline-group-title mb-4"><i class="bi bi-award me-2 text-primary"></i>Certifications</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="cert-card p-3 text-center d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                            <h4 class="cert-title small fw-bold mb-1">Front End Web Designing</h4>
+                                            <p class="cert-date text-muted mb-2">2025</p>
+                                            <p class="cert-issuer text-primary small mb-3"><i class="bi bi-patch-check-fill me-1"></i> Theta Solutions</p>
+                                        </div>
+                                        <div class="cert-img-wrapper" data-cert="theta.jpeg">
+                                            <div class="cert-overlay"><i class="bi bi-eye"></i> View Certificate</div>
+                                            <div class="cert-placeholder cert-theta-bg">Theta Solutions</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="cert-card p-3 text-center d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                            <h4 class="cert-title small fw-bold mb-1">Certificate of Achievement (EFx)</h4>
+                                            <p class="cert-date text-muted mb-2">2025</p>
+                                            <p class="cert-issuer text-primary small mb-3"><i class="bi bi-patch-check-fill me-1"></i> ASME UET KSK</p>
+                                        </div>
+                                        <div class="cert-img-wrapper" data-cert="asme.jpg">
+                                            <div class="cert-overlay"><i class="bi bi-eye"></i> View Certificate</div>
+                                            <div class="cert-placeholder cert-asme-bg">ASME UET KSK</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="cert-card p-3 text-center d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                            <h4 class="cert-title small fw-bold mb-1">CODEK 3.0 Coding Challenge</h4>
+                                            <p class="cert-date text-muted mb-2">2025</p>
+                                            <p class="cert-issuer text-primary small mb-3"><i class="bi bi-patch-check-fill me-1"></i> ACM UET New Campus</p>
+                                        </div>
+                                        <div class="cert-img-wrapper" data-cert="codex.jpeg">
+                                            <div class="cert-overlay"><i class="bi bi-eye"></i> View Certificate</div>
+                                            <div class="cert-placeholder cert-codex-bg">CODEK 3.0 ACM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section-padding bg-section-alt">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge section-badge mb-2">My Work</span>
+                    <h2 class="section-title">Portfolio</h2>
+                    <p class="section-desc mx-auto col-lg-8">
+                        A curated collection of my academic and personal projects, structured into Web-Based applications, CLI Console programs, and SQL Database designs.
+                    </p>
+                </div>
+
+                <!-- Portfolio Category Filter Tabs -->
+                <div class="portfolio-tabs-wrapper mb-5 text-center">
+                    <div class="btn-group portfolio-filters-btn-group" role="group" aria-label="Portfolio filters">
+                        <button type="button" class="btn filter-btn active" data-filter="all">All Projects</button>
+                        <button type="button" class="btn filter-btn" data-filter="web">Web-Based</button>
+                        <button type="button" class="btn filter-btn" data-filter="cli">CLI-Based</button>
+                        <button type="button" class="btn filter-btn" data-filter="db">Database-Based</button>
+                        <button type="button" class="btn filter-btn" data-filter="cn">Computer Networks</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="row g-4 portfolio-grid" id="portfolio-grid-container">
                     
-                    <div class="portfolio-item web">
-                        <img src="shafis.png" alt="Responsive Website">
-                        <div class="portfolio-overlay">
-                            <h4>Multipage Website 1</h4>
-                            <p>HTML & CSS<br>This is my first Website as a practice</p></p>
-                            <a href="https://mhamzashahidw.github.io/my-1st-website/" target="_blank" class="btn btn-solid btn-sm"><i class="bi bi-github"></i> GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item web">
-                        <img src="shop.png" alt="Product Listing Website">
-                        <div class="portfolio-overlay">
-                            <h4>Product Listing Web</h4>
-                            <p>HTML, CSS, JS, Bootstrap</p>
-                            <a href="https://mhamzashahidw.github.io/product-listening/" target="_blank" class="btn btn-solid btn-sm"><i class="bi bi-github"></i> GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item js">
-                        <img src="calculator.png" alt="JS Calculator">
-                        <div class="portfolio-overlay">
-                            <h4>Web Calculator</h4>
-                            <p>Pure JavaScript Logic</p>
-                            <a href="https://mhamzashahidw.github.io/calculator/" target="_blank" class="btn btn-solid btn-sm"><i class="bi bi-github"></i> GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item cpp">
-                        <img src="images/proj4.jpg" alt="Course Registration System">
-                        <div class="portfolio-overlay">
-                            <h4>Course Registration System</h4>
-                            <p>C++ & OOP Concepts</p>
-                            <a href="#" target="_blank" class="btn btn-solid btn-sm"><i class="bi bi-github"></i> GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item cpp">
-                        <img src="images/proj5.jpg" alt="Library Management System">
-                        <div class="portfolio-overlay">
-                            <h4>Library Management</h4>
-                            <p>C++ File Handling & Pointers</p>
-                            <a href="#" target="_blank" class="btn btn-solid btn-sm"><i class="bi bi-github"></i> GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item cpp">
-                        <img src="images/proj6.jpg" alt="Hospital Management System">
-                        <div class="portfolio-overlay">
-                            <h4>Hospital Management</h4>
-                            <p>C++ Data Structures</p>
-                            <a href="#" target="_blank" class="btn btn-solid btn-sm"><i class="bi bi-github"></i> GitHub</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <section id="service" class="page-section">
-            
-            <div class="section-header fade-in">
-                <h2 class="section-title">Services</h2>
-                <p class="section-desc">Delivering robust technical solutions by combining software engineering principles with creative digital design.</p>
-            </div>
-
-            <div class="services-intro fade-in delay-1">
-                <div class="services-intro-left">
-                    <h2>Providing tailored software and web solutions</h2>
-                </div>
-                <div class="services-intro-right">
-                    <p>I combine my academic foundation in software engineering with hands-on development experience to build efficient, scalable, and user-friendly digital systems.</p>
-                    <a href="#contact" class="btn btn-solid"><i class="bi bi-envelope"></i> Let's Work Together</a>
-                </div>
-            </div>
-
-            <div class="services-grid fade-in delay-2">
-                
-                <div class="service-card">
-                    <div class="service-icon"><i class="bi bi-window-sidebar"></i></div>
-                    <h3>Front-End Web Development</h3>
-                    <p>Designing and building fully responsive, multipage websites using HTML, CSS, Bootstrap, and jQuery to deliver seamless user experiences.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="bi bi-terminal"></i></div>
-                    <h3>C++ & OOP Architecture</h3>
-                    <p>Developing robust console applications, management systems, and complex logical solutions using advanced Object-Oriented Programming principles.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="bi bi-database-check"></i></div>
-                    <h3>Database Design (SQL)</h3>
-                    <p>Structuring efficient relational databases, ensuring data integrity, and writing optimized SQL queries for secure and organized data management.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="bi bi-cpu"></i></div>
-                    <h3>Algorithmic Problem Solving</h3>
-                    <p>Applying strong analytical skills, data handling techniques, and digital logic concepts to optimize software performance and solve complex tasks.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="bi bi-vector-pen"></i></div>
-                    <h3>UI/UX & Prototyping</h3>
-                    <p>Designing intuitive user interfaces, wireframes, and engaging visual assets using Figma and Canva to bridge the gap between design and functionality.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="bi bi-file-earmark-text"></i></div>
-                    <h3>Documentation & Reporting</h3>
-                    <p>Utilizing the Microsoft Office Suite (Word, Excel, PowerPoint) for comprehensive technical documentation, data organization, and professional presentations.</p>
-                </div>
-
-            </div>
-        </section>
-
-
-
-
-        <section id="testimonials" class="page-section">
-            
-            <div class="section-header fade-in">
-                <h2 class="section-title">Testimonials</h2>
-                <p class="section-desc">Feedback from professors, hackathon teammates, and academic collaborators.</p>
-            </div>
-
-            <div class="testimonials-grid fade-in delay-1">
-                
-                <div class="testimonial-card">
-                    <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                    <p class="testimonial-text">
-                        "Hamza demonstrated exceptional problem-solving skills in our Object-Oriented Programming course. His work on the Course Registration System showed a deep understanding of complex C++ architecture and data handling."
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="OIP.webp" alt="Professor" class="author-img">
-                        <div class="author-info">
-                            <h4>Dr. Umer Qasim</h4>
-                            <p>Computer Science Faculty, UET</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                    <p class="testimonial-text">
-                        "Working alongside Hamza in 'The Overloaders' team during the Codex 3.0 competition was a great experience. His ability to write clean, efficient logic under pressure was a huge asset to our team's success."
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="OIP.webp" alt="Arslan" class="author-img">
-                        <div class="author-info">
-                            <h4>Arslan</h4>
-                            <p>Fellow Developer & Teammate</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="quote-icon"><i class="bi bi-quote"></i></div>
-                    <p class="testimonial-text">
-                        "Hamza's dedication to clean code and responsive front-end design made our web development group project a massive success. He is highly collaborative, organized, and always delivers exactly what he promises."
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="OIP.webp" alt="Collaborator" class="author-img">
-                        <div class="author-info">
-                            <h4>Dr. Shehzad</h4>
-                            <p>Project Collaborator</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-
-       <section id="contact" class="page-section">
-            
-            <div class="section-header fade-in">
-                <h2 class="section-title">Contact</h2>
-                <p class="section-desc">Feel free to reach out for collaborations, academic project inquiries, or software development opportunities.</p>
-            </div>
-
-            <div class="contact-grid fade-in delay-1">
-                
-                <div class="contact-info-cards">
-                    <div class="contact-box">
-                        <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
-                        <div class="contact-text">
-                            <h4>Location</h4>
-                            <p>Zafarwal, Narowal, Pakistan</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-box">
-                        <div class="contact-icon"><i class="bi bi-envelope"></i></div>
-                        <div class="contact-text">
-                            <h4>Email Address</h4>
-                            <p>mhamzashahidw@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-box">
-                        <div class="contact-icon"><i class="bi bi-telephone"></i></div>
-                        <div class="contact-text">
-                            <h4>Phone Number</h4>
-                            <p>0370-8040671</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <form action="https://formspree.io/f/mgonvrrq" method="POST" class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" name="name" placeholder="Your Name" required>
+                    <!-- Web Website 1 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item web">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-window-sidebar"></i></div>
+                                    <div class="project-title-sub">Multipage Website 1</div>
+                                </div>
+                                <img src="shafis.png" alt="Multipage Website 1" class="img-fluid project-img d-none">
                             </div>
-                            <div class="form-group">
-                                <input type="email" name="email" placeholder="Your Email" required>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">Web-Based</span>
+                                <h4 class="card-project-title">Multipage Website 1</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    First multipage HTML & CSS practice site showing responsive design structure.
+                                </p>
+                                <div class="d-flex gap-2">
+                                    <a href="https://mhamzashahidw.github.io/my-1st-website/" target="_blank" class="btn btn-solid btn-sm w-50"><i class="bi bi-box-arrow-up-right me-1"></i> Live Demo</a>
+                                    <a href="https://github.com/mhamzashahidw/my-1st-website" target="_blank" class="btn btn-outline btn-sm w-50"><i class="bi bi-github me-1"></i> Git Code</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+
+                    <!-- Web Product Listing -->
+                    <div class="col-md-6 col-lg-4 portfolio-item web">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-cart3"></i></div>
+                                    <div class="project-title-sub">Product Listing Web</div>
+                                </div>
+                                <img src="shop.png" alt="Product Listing Web" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">Web-Based</span>
+                                <h4 class="card-project-title">Product Listing Web</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    Dynamic E-Commerce product catalog grid component using Bootstrap styling.
+                                </p>
+                                <div class="d-flex gap-2">
+                                    <a href="https://mhamzashahidw.github.io/product-listening/" target="_blank" class="btn btn-solid btn-sm w-50"><i class="bi bi-box-arrow-up-right me-1"></i> Live Demo</a>
+                                    <a href="https://github.com/mhamzashahidw/product-listening" target="_blank" class="btn btn-outline btn-sm w-50"><i class="bi bi-github me-1"></i> Git Code</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <textarea name="message" rows="6" placeholder="Message" required></textarea>
+                    </div>
+
+                    <!-- Web Calculator -->
+                    <div class="col-md-6 col-lg-4 portfolio-item web">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-calculator"></i></div>
+                                    <div class="project-title-sub">Web Calculator</div>
+                                </div>
+                                <img src="calculator.png" alt="Web Calculator" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">Web-Based</span>
+                                <h4 class="card-project-title">Web Calculator</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    High-fidelity responsive UI smartphone calculator powered by vanilla JavaScript logic.
+                                </p>
+                                <div class="d-flex gap-2">
+                                    <a href="https://mhamzashahidw.github.io/calculator/" target="_blank" class="btn btn-solid btn-sm w-50"><i class="bi bi-box-arrow-up-right me-1"></i> Live Demo</a>
+                                    <a href="https://github.com/mhamzashahidw/calculator" target="_blank" class="btn btn-outline btn-sm w-50"><i class="bi bi-github me-1"></i> Git Code</a>
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-solid w-100 text-center" style="display: block; width: 100%;">Send Message</button>
-                    </form>
+                    </div>
+
+                    <!-- CLI FoodExpress -->
+                    <div class="col-md-6 col-lg-4 portfolio-item cli">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-signpost-split"></i></div>
+                                    <div class="project-title-sub">FoodExpress Engine</div>
+                                </div>
+                                <img src="food.png" alt="FoodExpress Dispatch Engine" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">CLI-Based</span>
+                                <h4 class="card-project-title">FoodExpress Dispatch</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    Optimized real-time logistics route scheduler using C++ Max-Heap and Dijkstra's graph algorithm.
+                                </p>
+                                <a href="https://github.com/mhamzashahidw/Food-Express" target="_blank" class="btn btn-outline btn-sm w-100"><i class="bi bi-github me-1"></i> Git Code Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CLI Smart Campus Router -->
+                    <div class="col-md-6 col-lg-4 portfolio-item cli">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-map-fill"></i></div>
+                                    <div class="project-title-sub">Smart Campus Router</div>
+                                </div>
+                                <img src="smart.png" alt="Smart Campus Router" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">CLI-Based</span>
+                                <h4 class="card-project-title">Smart Campus Router</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    Dijkstra route pathfinder for UET KSK built using C++ adjacency lists with simulated weather delays.
+                                </p>
+                                <a href="https://github.com/mhamzashahidw/Smart-Campus-Management-System" target="_blank" class="btn btn-outline btn-sm w-100"><i class="bi bi-github me-1"></i> Git Code Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CLI Hospital Management -->
+                    <div class="col-md-6 col-lg-4 portfolio-item cli">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-building-add"></i></div>
+                                    <div class="project-title-sub">Hospital Management</div>
+                                </div>
+                                <img src="hosp.png" alt="Hospital Management System" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">CLI-Based</span>
+                                <h4 class="card-project-title">Hospital Controller</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    File-persistent multi-actor application utilizing C++ pure abstraction and OOP principles.
+                                </p>
+                                <a href="https://github.com/mhamzashahidw/hospital-management-system" target="_blank" class="btn btn-outline btn-sm w-100"><i class="bi bi-github me-1"></i> Git Code Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- CLI Campus Facility Booking and Billing -->
+                    <div class="col-md-6 col-lg-4 portfolio-item cli">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-building-add"></i></div>
+                                    <div class="project-title-sub">Campus Facility Booking And Billing System</div>
+                                </div>
+                                <img src="camp.png" alt="Campus Facility Booking And Billing System" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">CLI-Based</span>
+                                <h4 class="card-project-title">Campus Facilities</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    File-persistent multi-actor application utilizing C++ pure abstraction and OOP principles.
+                                </p>
+                                <a href="https://github.com/mhamzashahidw/Campus-Facility-Booking-and-Billing-System.git" target="_blank" class="btn btn-outline btn-sm w-100"><i class="bi bi-github me-1"></i> Git Code Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DB Hospital Managment System -->
+                    <div class="col-md-6 col-lg-4 portfolio-item db">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-database-fill-check"></i></div>
+                                    <div class="project-title-sub">Hospital Managment System</div>
+                                </div>
+                                <img src="dbms.png" alt="Hospital Managment System" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">Database-Based</span>
+                                <h4 class="card-project-title">Hospital Managment System</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    Hospital Managment System schema with optimized SQL queries and indexes to handle Hospital System.
+                                </p>
+                                <a href="https://github.com/mhamzashahidw/Hospital-Management-System-DB.git" target="_blank" class="btn btn-outline btn-sm w-100"><i class="bi bi-github me-1"></i> Git Code Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DB E-Commerce Inventory -->
+                 <!--   <div class="col-md-6 col-lg-4 portfolio-item db">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-database-fill-gear"></i></div>
+                                    <div class="project-title-sub">Inventory DB System</div>
+                                </div>
+                                <img src="images/db_inventory.png" alt="E-Commerce Inventory DB" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">Database-Based</span>
+                                <h4 class="card-project-title">Inventory DB System</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    High-integrity database setup with MySQL triggers for automatic order invoicing and inventory reduction.
+                                </p>
+                                <a href="https://github.com/mhamzashahidw" target="_blank" class="btn btn-outline btn-sm w-100"><i class="bi bi-github me-1"></i> Git Code Review</a>
+                            </div>
+                        </div>
+                    </div>  -->
+
+
+                    <!-- Computer Networks -->
+
+                     <div class="col-md-6 col-lg-4 portfolio-item cn">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-database-fill-gear"></i></div>
+                                    <div class="project-title-sub">University Network with multiple sub-campus</div>
+                                </div>
+                                <img src="cisco.png" alt="University Network with multiple sub-campus" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">Computer Networks</span>
+                                <h4 class="card-project-title">University Network with multiple sub-campus</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    A university Network with multiple sub-campus each campus having
+                                    multiple departments using a network simulator Cisco Packet Tracer.
+                                </p>
+                                <a href="https://github.com/mhamzashahidw/CN_University-Network.git" target="_blank" class="btn btn-outline btn-sm w-100"><i class="bi bi-github me-1"></i> Git Code Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Computer Networks Socket Programming -->
+                    <div class="col-md-6 col-lg-4 portfolio-item cn">
+                        <div class="portfolio-card">
+                            <div class="project-img-wrapper">
+                                <div class="project-image-placeholder p-4 text-center d-flex flex-column justify-content-center">
+                                    <div class="project-icon mb-2"><i class="bi bi-database-fill-gear"></i></div>
+                                    <div class="project-title-sub">Collaborative Network Monitoring and Alert Dashboard</div>
+                                </div>
+                                <img src="socket.png" alt="Collaborative Network Monitoring and Alert Dashboard" class="img-fluid project-img d-none">
+                            </div>
+                            <div class="portfolio-card-body p-4">
+                                <span class="badge card-category-badge mb-2">Computer Networks (Socket Programming) </span>
+                                <h4 class="card-project-title">Collaborative Network Monitoring and Alert Dashboard</h4>
+                                <p class="card-project-desc text-muted small mb-4">
+                                    A real-time Collaborative Network Monitoring and Alert Dashboard using socket programming that enables
+                                    multiple connected clients (more than three devices) to monitor, share, and respond to simulated network events over a local
+                                    area network (LAN/Wi-Fi).
+                                </p>
+                                <a href="https://github.com/mhamzashahidw/Collaborative-Network-Monitoring-and-Alert-Dashboard.git" target="_blank" class="btn btn-outline btn-sm w-100"><i class="bi bi-github me-1"></i> Git Code Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="service" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge section-badge mb-2">What I Offer</span>
+                    <h2 class="section-title">Services</h2>
                 </div>
 
-            </div>
+                <div class="row g-4 justify-content-center mb-5">
+                    <div class="col-lg-10">
+                        <div class="services-intro-card p-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
+                            <h3 class="mb-0 text-center text-md-start">Providing tailored software and web solutions</h3>
+                            <a href="#contact" class="btn btn-solid flex-shrink-0"><i class="bi bi-envelope-fill me-2"></i> Let's Work Together</a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="map-wrapper fade-in delay-2 mt-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card p-4 h-100">
+                            <div class="service-icon-wrapper mb-3"><i class="bi bi-window-sidebar"></i></div>
+                            <h3>Front-End Development</h3>
+                            <p class="text-muted small">Designing and building fully responsive, multipage websites using HTML, CSS, Bootstrap, and jQuery to deliver seamless user experiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card p-4 h-100">
+                            <div class="service-icon-wrapper mb-3"><i class="bi bi-terminal"></i></div>
+                            <h3>C++ & OOP Architecture</h3>
+                            <p class="text-muted small">Developing robust console applications, management systems, and complex logical solutions using advanced Object-Oriented Programming principles.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card p-4 h-100">
+                            <div class="service-icon-wrapper mb-3"><i class="bi bi-database-fill-check"></i></div>
+                            <h3>Database Design (SQL)</h3>
+                            <p class="text-muted small">Structuring efficient relational databases, ensuring data integrity, and writing optimized SQL queries for secure and organized data management.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card p-4 h-100">
+                            <div class="service-icon-wrapper mb-3"><i class="bi bi-cpu"></i></div>
+                            <h3>Algorithmic Solving</h3>
+                            <p class="text-muted small">Applying strong analytical skills, data handling techniques, and digital logic concepts to optimize software performance and solve complex tasks.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card p-4 h-100">
+                            <div class="service-icon-wrapper mb-3"><i class="bi bi-palette"></i></div>
+                            <h3>UI/UX & Prototyping</h3>
+                            <p class="text-muted small">Designing intuitive user interfaces, wireframes, and engaging visual assets using Figma and Canva to bridge the gap between design and functionality.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card p-4 h-100">
+                            <div class="service-icon-wrapper mb-3"><i class="bi bi-file-earmark-richtext"></i></div>
+                            <h3>Documentation & Reporting</h3>
+                            <p class="text-muted small">Utilizing the Microsoft Office Suite (Word, Excel, PowerPoint) for comprehensive technical documentation, data organization, and professional presentations.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4">
+                         <div class="service-card p-4 h-100">
+                            <div class="service-icon-wrapper mb-3"><i class="bi bi-diagram-3"></i></div>
+                            <h3>C++ & DSA Architecture</h3>
+                            <p class="text-muted small">Developing robust console applications, management systems, and complex logical solutions using advanced Data Structures And Algorithms.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4">
+                         <div class="service-card p-4 h-100">
+                            <div class="service-icon-wrapper mb-3"><i class="bi bi-globe2"></i></div>
+                            <h3>Advanced Computer Networking</h3>
+                            <p class="text-muted small">Designing secure topologies, configuring VLANs, optimizing dynamic routing (OSPF), and implementing robust ACL security policies.</p>
+                         </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section-padding bg-section-alt">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge section-badge mb-2">Teammates & Faculty</span>
+                    <h2 class="section-title">Testimonials</h2>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Testimonial 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card p-4 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="quote-mark mb-3"><i class="bi bi-quote"></i></div>
+                                <p class="testimonial-text text-muted small italic">
+                                    "Hamza demonstrated exceptional problem-solving skills in our Object-Oriented Programming course. His work on the Course Registration System showed a deep understanding of complex C++ architecture and data handling."
+                                </p>
+                            </div>
+                            <div class="testimonial-author d-flex align-items-center mt-4 pt-3 border-top border-secondary border-opacity-10">
+                                <div class="author-avatar-wrapper me-3">
+                                    <div class="author-fallback">UQ</div>
+                                    <img src="OIP.webp" alt="Dr. Umer Qasim" class="author-img d-none">
+                                </div>
+                                <div>
+                                    <h4 class="author-name mb-0">Dr. Umer Qasim</h4>
+                                    <p class="author-title text-muted mb-0 small">Computer Science Faculty, UET</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card p-4 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="quote-mark mb-3"><i class="bi bi-quote"></i></div>
+                                <p class="testimonial-text text-muted small italic">
+                                    "Working alongside Hamza in 'The Overloaders' team during the Codex 3.0 competition was a great experience. His ability to write clean, efficient logic under pressure was a huge asset to our team's success."
+                                </p>
+                            </div>
+                            <div class="testimonial-author d-flex align-items-center mt-4 pt-3 border-top border-secondary border-opacity-10">
+                                <div class="author-avatar-wrapper me-3">
+                                    <div class="author-fallback">A</div>
+                                    <img src="OIP.webp" alt="Arslan" class="author-img d-none">
+                                </div>
+                                <div>
+                                    <h4 class="author-name mb-0">Arslan</h4>
+                                    <p class="author-title text-muted mb-0 small">Fellow Developer & Teammate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card p-4 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="quote-mark mb-3"><i class="bi bi-quote"></i></div>
+                                <p class="testimonial-text text-muted small italic">
+                                    "Hamza's dedication to clean code and responsive front-end design made our web development group project a massive success. He is highly collaborative, organized, and always delivers exactly what he promises."
+                                </p>
+                            </div>
+                            <div class="testimonial-author d-flex align-items-center mt-4 pt-3 border-top border-secondary border-opacity-10">
+                                <div class="author-avatar-wrapper me-3">
+                                    <div class="author-fallback">DS</div>
+                                    <img src="OIP.webp" alt="Dr. Shehzad" class="author-img d-none">
+                                </div>
+                                <div>
+                                    <h4 class="author-name mb-0">Dr. Shehzad</h4>
+                                    <p class="author-title text-muted mb-0 small">Project Collaborator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge section-badge mb-2">Get In Touch</span>
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-desc mx-auto col-lg-8">
+                        Feel free to reach out for collaborations, academic project inquiries, or software development opportunities.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <div class="contact-info-wrapper-v2 p-4 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="contact-card-title mb-4">Contact Information</h3>
+                                <div class="contact-box-v2 mb-4 d-flex align-items-center">
+                                    <div class="contact-icon-box me-3"><i class="bi bi-geo-alt"></i></div>
+                                    <div>
+                                        <h4 class="mb-0 small fw-bold text-muted">Location</h4>
+                                        <p class="mb-0">Zafarwal, Narowal, Punjab, Pakistan</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-box-v2 mb-4 d-flex align-items-center">
+                                    <div class="contact-icon-box me-3"><i class="bi bi-envelope"></i></div>
+                                    <div>
+                                        <h4 class="mb-0 small fw-bold text-muted">Email Address</h4>
+                                        <p class="mb-0">mhamzashahidw@gmail.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-box-v2 d-flex align-items-center">
+                                    <div class="contact-icon-box me-3"><i class="bi bi-telephone"></i></div>
+                                    <div>
+                                        <h4 class="mb-0 small fw-bold text-muted">Phone Number</h4>
+                                        <p class="mb-0">0370-8040671</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="social-wrapper mt-4">
+                                <h4 class="mb-3 small fw-bold text-muted">Connect Socially</h4>
+                                <div class="d-flex gap-2">
+                                    <a href="https://github.com/mhamzashahidw" target="_blank" class="social-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/mhamzashahidw61" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                    <a href="https://wa.me/923708040671" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                                    <a href="https://www.instagram.com/hamzashahid679?igsh=MW9ubjR0emtkeDJnYw==" target="_blank" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="contact-form-wrapper-v2 p-4">
+                            <form action="https://formspree.io/f/mgonvrrq" method="POST" id="contact-form" class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" name="name" class="form-control" id="form-name" placeholder="Your Name" required>
+                                            <label for="form-name">Your Name</label>
+                                            <div class="invalid-feedback">Please enter your name.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" name="email" class="form-control" id="form-email" placeholder="Your Email" required>
+                                            <label for="form-email">Your Email</label>
+                                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="subject" class="form-control" id="form-subject" placeholder="Subject" required>
+                                    <label for="form-subject">Subject</label>
+                                    <div class="invalid-feedback">Please enter a subject.</div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <textarea name="message" class="form-control" id="form-message" placeholder="Message" style="height: 150px" required></textarea>
+                                    <label for="form-message">Message</label>
+                                    <div class="invalid-feedback">Please type your message.</div>
+                                </div>
+                                <button type="submit" class="btn btn-solid w-100 py-3" id="form-submit-btn">Send Message <i class="bi bi-send-fill ms-2"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section (Positioned beneath contact page at the end of content) -->
+        <section id="map-section" class="w-100">
+            <div class="map-container-v2 shadow-inner">
                 <iframe 
+                    title="Location Map - Zafarwal"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108342.94318721321!2d74.78652614999999!3d32.3444455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391ecc13a0c02c65%3A0xf64f5263a23cb237!2sZafarwal%2C%20Narowal%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1710500000000!5m2!1sen!2s" 
                     width="100%" 
-                    height="350" 
+                    height="400" 
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-
         </section>
-
-
-
 
     </main>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer-wrapper text-center py-4 bg-section-alt">
+        <div class="container">
+            <p class="mb-2">&copy; 2026 HamzaDevLog. All Rights Reserved.</p>
+            <p class="small text-muted mb-0">Designed & Built by Hamza Shahid</p>
+        </div>
+    </footer>
+
+    <!-- Certification Modal Viewer (Lightbox) -->
+    <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border-secondary">
+                <div class="modal-header border-secondary-subtle">
+                    <h5 class="modal-title" id="certModalLabel">Certificate Viewer</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="" id="modalCertImg" alt="Certificate Preview" class="img-fluid w-100">
+                    <div id="modalCertFallback" class="p-5 d-none">
+                        <p class="fs-4 mb-0">Certificate Image Not Found</p>
+                        <p class="small text-muted">Please place the certificate files in the images/ folder.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & jQuery JS CDNs -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Script File -->
+    <script src="js/script.js"></script>
 </body>
 </html>
